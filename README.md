@@ -82,7 +82,7 @@ vms = {
       mount     = "/data"       # ext4 mountpoint
     }
   }
-  srvprod-01 = {
+  host-prod-01 = {
     vmid        = 302
     node        = "proxmox-01"
     description = "Production VM"
