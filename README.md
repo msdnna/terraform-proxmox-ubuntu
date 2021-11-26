@@ -1,6 +1,8 @@
 # Usage (Ubuntu 20.04 host)
 
-Create and install the [base Ubuntu vagrant box](https://github.com/msdnna/ubuntu-vagrant).
+**Build the [base Ubuntu vagrant box](https://github.com/msdnna/ubuntu-vagrant) for Proxmox.**
+
+![Convert disk image in created template from raw to qcow2](https://github.com/msdnna/terraform-proxmox-ubuntu/blob/master/convert_disk_format.png?raw=true)
 
 **Install Terraform:**
 
@@ -23,7 +25,7 @@ cd /path/on/terraform/machine/terraform-proxmox-ubuntu
 
 >On Proxmox node:
 
-![alt text](https://github.com/msdnna/terraform-proxmox-ubuntu/blob/master/add_terraform_storage.png?raw=true)
+![Add NFS share to Proxmox](https://github.com/msdnna/terraform-proxmox-ubuntu/blob/master/add_terraform_storage.png?raw=true)
 
 **Create the infrastructure:**
 
