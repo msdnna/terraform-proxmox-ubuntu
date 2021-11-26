@@ -122,7 +122,7 @@ resource "proxmox_vm_qemu" "vm_qemu" {
     connection {
       type      = "ssh"
       user      = each.value.username
-      host      = replace(each.value.ipconfig0, "/gw=.*ip=|\\/[0-9][0-9]?/", "")
+      host      = replace(each.value.ipconfig0, "/\\/[0-9][0-9]?,gw=.*|ip=/", "")
       private_key = file("~/.ssh/id_rsa")
     }
   }
@@ -130,5 +130,5 @@ resource "proxmox_vm_qemu" "vm_qemu" {
 
 output "IPs" {
    # value = tomap({ for ip, vm in proxmox_vm_qemu.vm_qemu : ip => length(vm.default_ipv4_address) > 0 ? jsonencode(vm.default_ipv4_address) : "" })
-  value = tomap({ for ip, vm in var.vms : ip => replace(vm.ipconfig0, "/gw=.*ip=|\\/[0-9][0-9]?/", "") })
+  value = tomap({ for ip, vm in var.vms : ip => replace(vm.ipconfig0, "/\\/[0-9][0-9]?,gw=.*|ip=/", "") })
 }
