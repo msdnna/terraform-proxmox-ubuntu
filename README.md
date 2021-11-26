@@ -2,6 +2,8 @@
 
 **Build the [base Ubuntu vagrant box](https://github.com/msdnna/ubuntu-vagrant) for Proxmox.**
 
+**Convert disk image in created template from raw to qcow2:**
+
 ![Convert disk image in created template from raw to qcow2](https://github.com/msdnna/terraform-proxmox-ubuntu/blob/master/convert_disk_format.png?raw=true)
 
 **Install Terraform:**
